@@ -6,16 +6,6 @@ CKB-VM fuzzing test script and corpus repository.
 
 Running `run.sh` clones <a href="https://github.com/nervosnetwork/ckb-vm">nervosnetwork/ckb-vm</a> under `deps/` and invokes `cargo +nightly fuzz run`. You need a full native build environment on the machine, not only the packages shown in CI snippets.
 
-### Rust
-
-- Install <a href="https://rustup.rs/">rustup</a>. Ensure `cargo` is on `PATH` in the same shell that runs `run.sh` (e.g. `source "$HOME/.cargo/env"` or add `$HOME/.cargo/bin` to `PATH`).
-- Install nightly and <a href="https://github.com/rust-fuzz/cargo-fuzz">cargo-fuzz</a>:
-
-  ```bash
-  rustup toolchain install nightly
-  cargo install cargo-fuzz
-  ```
-
 ### C/C++ toolchain
 
 - **C linker** (`cc`): required to build `cargo-fuzz` and other native code. On Debian/Ubuntu:
